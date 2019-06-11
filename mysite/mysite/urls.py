@@ -19,6 +19,7 @@ from . import views
 
 urlpatterns = [
     path('polls/', include('polls.urls')),
+    path('contact/', include('contactform.urls')),
     path('questplugger/', include('questplugger.urls')),
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),

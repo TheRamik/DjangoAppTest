@@ -8,6 +8,11 @@
 <hr></hr>
 <ul>
 {% for deliverables in questpin.questdeliverables_set.all %}
-    <li>{{ deliverables.choice_text }}</li>
+    <li> Deliverable: {{ deliverables.deliverable }}</li>
+    <li> Executive Summary: {{ deliverables.executive_summary }}</li>
+    <li> Personas: {{ deliverables.personas }}</li>
+    <li> UX Map: {{ deliverables.ux_map }}</li>
+    <li> Information Architecture: {{ deliverables.information_architecture }}</li>
+    <li> UX Research: {{ deliverables.ux_research }}</li>
 {% endfor %}
 </ul>
