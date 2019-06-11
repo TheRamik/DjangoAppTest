@@ -1,0 +1,13 @@
+<h1>{{ questpin.name }}</h1>
+<ul>
+    <li>{{questpin.rank}}</li>
+    <li>{{questpin.role}}</li>
+    <li>{{questpin.teamsize}}</li>
+    <li>{{questpin.duration}}</li>
+</ul>
+<hr></hr>
+<ul>
+{% for deliverables in questpin.questdeliverables_set.all %}
+    <li>{{ deliverables.choice_text }}</li>
+{% endfor %}
+</ul>
