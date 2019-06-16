@@ -2,14 +2,50 @@
 
 Practicing my Django web application skills here.
 
-# How to run
+# How to run Program
 
-Go on Git bash and activate the Python Virtual Environment
+### Install the virtualenv package
+Install the virtualenv package to create and activate a virtual environment
 ```
-source mypython/Scripts/activate
+pip install virtualenv
 ```
 
-Then run the server with the following command:
+### Create virtual environment
+```
+virtualenv venv
+```
+
+### Activate the virtual environment
+
+Mac OS / Linux
+```
+source venv/bin/activate
+```
+
+Windows
+```
+source venv/source/activate
+
+--- or ---
+
+venv\Scripts\activate
+```
+
+### Get necessary files to run the program in the virtual environment
+
+pip has the option to install everything needed to run the program with requirements.txt
+```
+pip install -r requirements.txt
+```
+
+
+### Deactive the virtual environment
+```
+deactivate
+```
+
+### To run the server 
+
 ```
 python manage.py runserver 8001
 ```
@@ -22,3 +58,11 @@ python manage.py runserver 8001
 pip install django-multiselectfield
 ```
 
+# Notes
+
+### Requirements.txt
+
+Make sure if there are any installs, plugins, or libraries added to add to the requirements.txt. This cab be done with the following command:
+```
+pip freeze > requirements.txt
+```

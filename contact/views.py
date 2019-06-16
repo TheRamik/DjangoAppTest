@@ -19,5 +19,5 @@ def index(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             messages.info(request, 'Your message has been sent successfully!')
-            return HttpResponseRedirect('/home/')
+            return HttpResponseRedirect('')
     return render(request, "contact.html", {'form': form})
