@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Latest Quest Pins</h1>
+    <h1>Quest Pins</h1>
     {% if quest_pin_list %}
         <ul>
         {% for quest in quest_pin_list %}
-            <li><a href="quests/quest/{{quest.id}}">{{quest.name}}</a></li>
+            <li><a href="quest/{{quest.id}}">{{quest.name}}</a></li>
         {% endfor %}
         </ul>
     {% else %}

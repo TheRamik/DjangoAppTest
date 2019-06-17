@@ -1,4 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
+{% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'questform/style.css' %}">
 <h1>Quest Form</h1>
 <form method="post">
@@ -9,3 +11,4 @@
       <button type="submit">Submit</button>
     </div>
 </form>
+{% endblock %}
