@@ -1,7 +1,10 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'questform/style.css' %}">
 <h1>Quest Form</h1>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ quest_form.as_p }}
+    {{ result_form.as_p }}
     <div class="form-actions">
       <button type="submit">Submit</button>
     </div>
