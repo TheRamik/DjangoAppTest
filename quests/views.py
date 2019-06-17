@@ -47,5 +47,5 @@ def quest_form(request):
             quest_result.deliverables = result_form.cleaned_data['deliverables']
             quest_result.save()
             messages.info(request, 'Your quest has been sent successfully!')
-            return HttpResponseRedirect('')
+            return HttpResponseRedirect('/quests')
     return render(request, "quests/questform.html", {'quest_form': quest_form, 'result_form': result_form})
